@@ -10,6 +10,8 @@ import java.util.Locale;
 
 public class DataHelper {
 
+    static Faker faker = new Faker(new Locale("en"));
+
     private DataHelper() {
     }
 
@@ -18,14 +20,17 @@ public class DataHelper {
     }
 
     public static String getDeclinedCardNumber() {
+
         return "4444444444444442";
     }
 
     public static String getInvalidCardNumber() {
+
         return "4444";
     }
 
     public static String getCurrentMonth() {
+
         return LocalDate.now().format(DateTimeFormatter.ofPattern("MM"));
     }
 
@@ -34,6 +39,7 @@ public class DataHelper {
     }
 
     public static String getCurrentYear() {
+
         return LocalDate.now().format(DateTimeFormatter.ofPattern("yy"));
     }
 
@@ -46,22 +52,13 @@ public class DataHelper {
     }
 
     public static String getName() {
+
         return faker.name().firstName() + " " + faker.name().lastName();
     }
 
     public static String getCVC() {
+
         return Integer.toString(faker.number().numberBetween(100, 999));
-    }
-
-    static Faker faker = new Faker(new Locale("en"));
-
-    @Value
-    public static class CardInfo {
-        private String cardNumber;
-        private String month;
-        private String year;
-        private String name;
-        private String cvc;
     }
 
     public static CardInfo getCardInfoValidValues() {
@@ -130,6 +127,15 @@ public class DataHelper {
 
     public static CardInfo getCardInfoCVCNull() {
         return new CardInfo(getApprovedCardNumber(), getCurrentMonth(), getNextYear(), getName(), "000");
+    }
+
+    @Value
+    public static class CardInfo {
+        private String cardNumber;
+        private String month;
+        private String year;
+        private String name;
+        private String cvc;
     }
 
 }
