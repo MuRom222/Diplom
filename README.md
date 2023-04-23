@@ -10,14 +10,14 @@
 
 ## Документация
 
-- Планирование автоматизации тестирования
-- Отчётные документы по итогам тестирования
-- Отчётные документы по итогам автоматизации
+- [Планирование автоматизации тестирования](https://github.com/MuRom222/Diplom/blob/main/documents/Plan.md)
+- [Отчётные документы по итогам тестирования](https://github.com/MuRom222/Diplom/blob/main/documents/Report.md)
+- [Отчётные документы по итогам автоматизации](https://github.com/MuRom222/Diplom/blob/main/documents/Summary.md)
 
 ## Начало работы
 
 Перед стартом работы рекомендуется проверить, что у вас есть все необходимое программное обеспечение изложенное в разделе "Prerequisites".
-Для получения копии проекта вам потребуется выполнить клонирование репозитория https://github.com/MuRom222/Diplom
+Для получения копии проекта вам потребуется выполнить клонирование репозитория `https://github.com/MuRom222/Diplom`
 
 ### Prerequisites
 
@@ -31,27 +31,27 @@
 
 ### Установка и запуск
 
-1. Клонировать репозиторий командой git clone https://github.com/MuRom222/Diplom;
+1. Клонировать репозиторий командой `git clone https://github.com/MuRom222/Diplom`;
 2. Открыть проект в IntelliJ IDEA;
-3. Запустить MySQL, PostgreSQL, NodeJS через терминал командой: docker-compose up.
+3. Запустить MySQL, PostgreSQL, NodeJS через терминал командой: `docker-compose up`.
 
 #### Для проверки MySQL:
 
-1. В новой вкладке терминала запустить тестируемое приложение командой: java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar;
-2. Убедиться в готовности системы. Приложение должно быть доступно по адресу: http://localhost:8080/;
-3. В новой вкладке терминала запустить тесты командой: .\gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app" ;
-4. Для создания отчета запустить команду:./gradlew allureServe.
+1. В новой вкладке терминала запустить тестируемое приложение командой: `java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar`;
+2. Убедиться в готовности системы. Приложение должно быть доступно по адресу: `http://localhost:8080/`;
+3. В новой вкладке терминала запустить тесты командой: `.\gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app"` ;
+4. Для создания отчета запустить команду:`./gradlew allureServe`.
 
 #### Для проверки PostgreSQL:
 
-1. В новой вкладке терминала запустить тестируемое приложение командой: java " java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar;
-2. Убедиться в готовности системы. Приложение должно быть доступно по адресу: http://localhost:8080/;
-3. В новой вкладке терминала запустить тесты командой: .\gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"  ;
-4. Для создания отчета запустить команду: ./gradlew allureServe.
+1. В новой вкладке терминала запустить тестируемое приложение командой: `java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar`;
+2. Убедиться в готовности системы. Приложение должно быть доступно по адресу: `http://localhost:8080/`;
+3. В новой вкладке терминала запустить тесты командой: `.\gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"`;
+4. Для создания отчета запустить команду:`./gradlew allureServe`.
 
-Для остановки приложений использовать команду Cntrl C.
+Для остановки приложений использовать команду `Cntrl + C`.
 
-Для удаления контейнеров использовать команду docker-compose down
+Для удаления контейнеров использовать команду `docker-compose down`.
 
 ## Лицензия
 
